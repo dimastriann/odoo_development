@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+  <template id="stock_asset_backend" inherit_id="web.assets_backend">
+    <xpath expr="." position="inside">
+      <link rel="stylesheet" type="text/scss" href="/dn_inventory_dashboard/static/src/scss/inventory.scss"/>
+      <script type="text/javascript" src="/dn_inventory_dashboard/static/src/js/inventory_dashboard.js"/>
+    </xpath>
+  </template>
+</odoo>

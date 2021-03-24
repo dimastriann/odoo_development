@@ -1,0 +1,84 @@
+.o_dn_inventory_dashboard {
+    flex: 1 0 100%;
+    padding: 10px 10px 18px 10px;
+
+    background-color: $o-view-background-color;
+    position: relative;
+    max-width: 100%;
+
+    .row {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .o_dn_inventory_action {
+        cursor: pointer;
+    }
+
+    .table {
+        > thead {
+            & > tr > td {
+                text-align: center;
+                width: 25%;
+                height: 33px;
+                vertical-align: middle;
+                border-top: 1px solid $o-view-background-color;
+                background-color: $o-brand-lightsecondary;
+
+                &.o_text {
+                    background-color: $o-brand-secondary;
+                    &:hover {
+                        background-color: darken($o-brand-lightsecondary, 15%);
+                        transform: scale(1.2);
+                    }
+                }
+
+                > a:hover {
+                    text-decoration: none;
+                }
+
+                &.o_stat {
+                    background-color: $o-brand-lightsecondary;
+                    &:hover {
+                        background-color: rgb(60, 179, 113);
+                        transform: scale(1.2);
+                    }
+                    > a {
+                        color: black;
+                    }
+                    > a:hover {
+                        color: white;
+                    }
+                }
+
+                &.o_stat_waiting {
+                    background-color: $o-brand-lightsecondary;
+                    &:hover {
+                        background-color: rgb(255, 165, 0);
+                        transform: scale(1.2);
+                    }
+                    > a {
+                        color: black;
+                    }
+                    > a:hover {
+                        color: white;
+                    }
+                }
+
+                &.o_stat_late {
+                    background-color: $o-brand-lightsecondary;
+                    &:hover {
+                        background-color: theme-color('danger');
+                        transform: scale(1.2);
+                    }
+                    > a {
+                        color: black;
+                    }
+                    > a:hover {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}

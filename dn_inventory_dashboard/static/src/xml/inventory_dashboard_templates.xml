@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="dn_inventory_dashboard_qweb">
+    <t t-name="dn.InventoryDashboard">
+        <div class="o_dn_inventory_dashboard container">
+            <div class="row">
+                <t t-foreach="stockValues" t-as="stock">
+                    <div class="col-sm-4">
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <td><span t-esc="stockValues[stock]"/></td>
+<!--                                    <td colspan="2" class="o_text o_dn_inventory_action" t-att-title="stock['name']"-->
+<!--                                        t-att-context="stock['context']">-->
+<!--                                        <t t-esc="stock['name']"/>-->
+<!--                                    </td>-->
+                                </tr>
+<!--                                <tr t-foreach="stock['data']" t-as="val">-->
+<!--                                    <td><t t-esc="val['ready']"/> </td>-->
+<!--&lt;!&ndash;                                    <td class="o_stat o_dn_inventory_action">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <a href="#"><t t-esc="stock['data']['ready']"/><br/>Ready</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </td>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <td><t t-esc="stock['data']['context']"/> </td>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <td class="o_stat o_dn_inventory_action">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <a href="#"><t t-esc="stock['data']['waiting']"/><br/>Waiting</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </td>&ndash;&gt;-->
+<!--                                </tr>-->
+                            </thead>
+                        </table>
+                    </div>
+                </t>
+            </div>
+<!--            <div class="row">-->
+<!--                <div class="col-sm-4">-->
+<!--                    <table class="table table-sm">-->
+<!--                        <thead>-->
+<!--                            <tr>-->
+<!--                                <td rowspan="2" class="o_text o_dn_inventory_action" t-att-title="title_test" -->
+<!--                                    context='{"search_default_picking_type_code": "incoming"}'>All Receipts</td>-->
+<!--                                <td class="o_stat_waiting o_dn_inventory_action" title="All Receipts Waiting">-->
+<!--                                    <a href="#"><t t-esc="values_in[0]['count_picking_waiting_in']"/><br/>Waiting</a>-->
+<!--                                </td>-->
+<!--                                <td class="o_stat_late o_dn_inventory" title="All Receipts Late">-->
+<!--                                    <a href="#"><t t-esc="values_in[2]['count_picking_late_in']"/><br/>Late</a>-->
+<!--                                </td>-->
+<!--                            </tr>-->
+<!--                            <tr>-->
+<!--                                <td class="o_stat o_dn_inventory" title="All Receipts Ready">-->
+<!--                                    <a href="#"><t t-esc="values_in[1]['count_picking_ready_in']"/><br/>Ready</a>-->
+<!--                                </td>-->
+<!--                                <td class="o_stat o_dn_inventory" title="All Receipts Back Orders">-->
+<!--                                    <a href="#"><t t-esc="values_in[3]['count_picking_backorders_in']"/><br/>Back Orders</a>-->
+<!--                                </td>-->
+<!--                            </tr>-->
+<!--                        </thead>-->
+<!--                    </table>-->
+<!--                </div>-->
+<!--                <div class="col-sm-4">-->
+<!--                    <table class="table table-sm">-->
+<!--                        <thead>-->
+<!--                            <tr>-->
+<!--                                <td rowspan="2" class="o_text o_dn_inventory_action" title="All Internal Transfers" name="stock.stock_picking_action_picking_type"-->
+<!--                                    context='{"search_default_picking_type_code": "internal"}'>All Internal Transfers</td>-->
+<!--                                <td class="o_stat_waiting o_dn_inventory">-->
+<!--                                    <a href="#"><t t-esc="values_int[0]['count_picking_waiting_int']"/><br/>Waiting</a>-->
+<!--                                </td>-->
+<!--                                <td class="o_stat_late o_dn_inventory">-->
+<!--                                    <a href="#"><t t-esc="values_int[2]['count_picking_late_int']"/><br/>Late</a>-->
+<!--                                </td>-->
+<!--                            </tr>-->
+<!--                            <tr>-->
+<!--                                <td class="o_stat o_dn_inventory">-->
+<!--                                    <a href="#"><t t-esc="values_int[1]['count_picking_ready_int']"/><br/>Ready</a>-->
+<!--                                </td>-->
+<!--                                <td class="o_stat o_dn_inventory">-->
+<!--                                    <a href="#"><t t-esc="values_int[3]['count_picking_backorders_int']"/><br/>Back Orders</a>-->
+<!--                                </td>-->
+<!--                            </tr>-->
+<!--                        </thead>-->
+<!--                    </table>-->
+<!--                </div>-->
+<!--                <div class="col-sm-4">-->
+<!--                    <table class="table table-sm">-->
+<!--                        <thead>-->
+<!--                            <tr>-->
+<!--                                <td rowspan="2" class="o_text o_dn_inventory_action" title="All Delivery Orders" name="stock.stock_picking_action_picking_type"-->
+<!--                                    context='{"search_default_picking_type_code": "outgoing"}'>All Delivery Orders</td>-->
+<!--                                <td class="o_stat_waiting o_dn_inventory">-->
+<!--                                    <a href="#"><t t-esc="values_out[0]['count_picking_waiting_out']"/><br/>Waiting</a>-->
+<!--                                </td>-->
+<!--                                <td class="o_stat_late o_dn_inventory">-->
+<!--                                    <a href="#"><t t-esc="values_out[2]['count_picking_late_out']"/><br/>Late</a>-->
+<!--                                </td>-->
+<!--                            </tr>-->
+<!--                            <tr>-->
+<!--                                <td class="o_stat o_dn_inventory">-->
+<!--                                    <a href="#"><t t-esc="values_out[1]['count_picking_ready_out']"/><br/>Ready</a>-->
+<!--                                </td>-->
+<!--                                <td class="o_stat o_dn_inventory">-->
+<!--                                    <a href="#"><t t-esc="values_out[3]['count_picking_backorders_out']"/><br/>Back Orders</a>-->
+<!--                                </td>-->
+<!--                            </tr>-->
+<!--                        </thead>-->
+<!--                    </table>-->
+<!--                </div>-->
+<!--            </div>-->
+        </div>
+    </t>
+</templates>
