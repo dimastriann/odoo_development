@@ -26,9 +26,10 @@ class StockPickingType(models.Model):
             'search_default_%s': True,
             'search_default_group_by_picking_type': True
         }
-
+        op_type_code = sorted(set(self.mapped('code')))
+        op_type_code.remove('mrp_operation')
         stock_data = []
-        for operation in sorted(set(self.mapped('code'))):
+        for operation in op_type_code:
             op_type = "Receipts" if operation == 'incoming' else ("Delivery" if operation == 'outgoing' else operation)
             results = {}
             for field in domains:
