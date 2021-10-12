@@ -1,1 +1,3 @@
-# Odoo extra addons from dimas nugraha
+# Odoo development 
+=> self learning
+=> research and development
